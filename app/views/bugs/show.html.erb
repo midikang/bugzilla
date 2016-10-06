@@ -1,0 +1,25 @@
+<% @b = Bug.find(params[:id]) %> 
+
+<h1 align="center"> 
+
+	Title: <%= @b.title %>
+
+</h1>
+
+<h5 align="center"> 
+
+	Type= <%= @b.ty %>
+
+</h5>
+
+<h6 align="center"> 
+
+	Status: <%= @b.status %>
+
+</h6>
+
+<% if can? :update ,Bug %>
+	<div align = "center">
+		<%= link_to "Update Bug Status",edit_project_bug_path(@b.project,@b),class: "btn btn-danger"%>
+	</div>
+	<% end %>

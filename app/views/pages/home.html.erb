@@ -1,0 +1,11 @@
+<div class="center jumbotron" align="center">
+	<h1 class = "center"> 
+		BugZilla
+	</h1>
+	<%if !user_signed_in? %>
+
+		<%= link_to "Sign up now", new_user_registration_path ,class: "btn btn-danger btn-lg btn-xlg" %>
+
+	<% end %>
+
+</div>

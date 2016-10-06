@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: postgres
+  password: postgres
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: bugzilla
+test: &test
+  <<: *default
+  database: bugzilla_test
+production:
+  <<: *default
+  database: bugzilla_production
+

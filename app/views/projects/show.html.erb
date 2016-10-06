@@ -1,0 +1,33 @@
+<h2 align="center">
+	Title: <%= @project.title %> 
+</h2>
+
+<div class="well col-xs-8 col-xs-offset-2">
+
+	<h4 class="center description">
+
+		<strong>
+
+			Description:
+
+		</strong>
+
+	</h4>
+
+<hr>
+
+<%= simple_format(@project.des) %>
+
+</div>
+
+
+<div class="col-xs-8 col-xs-offset-2" align = "center">
+	<% if  can? :create , Bug%> 
+		<%= link_to "Post A Bug" , new_project_bug_path(@project),class: "btn btn-danger" %>
+	<% end %>
+
+	<% if  can? :read , Bug%> 
+		<%= link_to "Show All Bugs" , project_bugs_path(@project),class: "btn btn-danger" %>
+	<% end %>
+
+</div>

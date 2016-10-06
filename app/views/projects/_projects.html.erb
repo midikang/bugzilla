@@ -1,0 +1,21 @@
+<% obj.each do |project| %>
+	
+	<div class = "row">
+	
+		<div class = "col-xs-8 col-xs-offset-2">
+	
+			<div class = "well well-lg">
+	
+				<div class ="article-title">
+	
+					<%= link_to project.title, project_path(project) %>
+	
+				</div>
+	
+			</div>
+
+		</div>
+
+	</div>
+
+<% end %>

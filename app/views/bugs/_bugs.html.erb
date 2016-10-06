@@ -1,0 +1,22 @@
+<% obj.each do |bug| %>
+	
+	<div class = "row">
+	
+		<div class = "col-xs-8 col-xs-offset-2">
+	
+			<div class = "well well-lg">
+	
+				<div class ="article-title">
+	
+					<%= link_to bug.title, project_bug_path(Project.find(params[:project_id]),bug) %>
+					<%= '| '+bug.ty+
+					' | '+ bug.status %>
+				</div>
+	
+			</div>
+
+		</div>
+
+	</div>
+
+<% end %>
